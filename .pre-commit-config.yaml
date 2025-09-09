@@ -1,0 +1,122 @@
+# Pre-commit hooks configuration for Flutter DDD Template
+repos:
+  # Dart/Flutter specific hooks
+  - repo: https://github.com/invertase/dart_pre_commit
+    rev: v2.0.0
+    hooks:
+      - id: dart-format
+        name: Format Dart code
+        description: Formats Dart code using dart format
+        entry: dart format
+        language: system
+        files: '\.dart$'
+        pass_filenames: true
+        
+      - id: dart-analyze
+        name: Analyze Dart code
+        description: Analyzes Dart code using dart analyze
+        entry: dart analyze
+        language: system
+        files: '\.dart$'
+        pass_filenames: false
+        
+  # General code quality hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+        name: Remove trailing whitespace
+        
+      - id: end-of-file-fixer
+        name: Fix end of file
+        
+      - id: check-yaml
+        name: Check YAML syntax
+        
+      - id: check-json
+        name: Check JSON syntax
+        
+      - id: check-merge-conflict
+        name: Check for merge conflicts
+        
+      - id: check-case-conflict
+        name: Check for case conflicts
+        
+      - id: mixed-line-ending
+        name: Fix mixed line endings
+        args: ['--fix=lf']
+        
+  # Custom Flutter hooks
+  - repo: local
+    hooks:
+      - id: flutter-test
+        name: Run Flutter tests
+        entry: bash -c 'if command -v fvm &> /dev/null; then fvm flutter test; else flutter test; fi'
+        language: system
+        stages: [push]  # Only run on push, not on every commit
+        pass_filenames: false
+        
+      - id: flutter-build-runner
+        name: Run build_runner if needed
+        entry: bash -c '
+          if git diff --cached --name-only | grep -q "\.dart$" && 
+             find lib -name "*.dart" -exec grep -l "@freezed\|@injectable\|@JsonSerializable" {} \; | head -1; then
+            echo "Dart files with annotations changed, running build_runner..."
+            if command -v fvm &> /dev/null; then 
+              fvm flutter packages pub run build_runner build --delete-conflicting-outputs
+            else 
+              flutter packages pub run build_runner build --delete-conflicting-outputs
+            fi
+          fi
+        '
+        language: system
+        stages: [pre-commit]
+        pass_filenames: false
+        
+      - id: pubspec-lock-check
+        name: Check pubspec.lock consistency
+        entry: bash -c '
+          if git diff --cached --name-only | grep -q "pubspec.yaml"; then
+            echo "pubspec.yaml changed, ensuring pubspec.lock is updated..."
+            if command -v fvm &> /dev/null; then 
+              fvm flutter packages get
+            else 
+              flutter packages get
+            fi
+            git add pubspec.lock
+          fi
+        '
+        language: system
+        stages: [pre-commit]
+        pass_filenames: false
+        
+      - id: import-sorter
+        name: Sort Dart imports
+        entry: bash -c '
+          for file in "$@"; do
+            if [[ "$file" == *.dart ]]; then
+              # Simple import sorting (basic implementation)
+              if command -v fvm &> /dev/null; then
+                fvm dart format "$file"
+              else
+                dart format "$file"
+              fi
+            fi
+          done
+        '
+        language: system
+        files: '\.dart$'
+        pass_filenames: true
+
+# Configuration
+ci:
+  autofix_commit_msg: |
+    [pre-commit.ci] auto fixes from pre-commit hooks
+
+    for more information, see https://pre-commit.ci
+  autofix_prs: true
+  autoupdate_branch: ''
+  autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
+  autoupdate_schedule: weekly
+  skip: []
+  submodules: false

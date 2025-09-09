@@ -1,0 +1,69 @@
+# Project Configuration
+# This file contains all configurable project settings
+# Run the configure script to apply these changes
+
+project:
+  name: "shemanit"
+  description: "A fantastic Flutter application by shemanit.co"
+  version: "1.0.0"
+  build_number: "1"
+  
+  # Package name (used for Android and iOS bundle identifier)
+  package_name: "co.shemanit.shemanit"
+  
+  # App display name (shown on device)
+  display_name: "shemanit"
+  
+  # Company/Organization details
+  company:
+    name: "shemanit.co"
+    website: "https://shemanit.co"
+    email: "contact@shemanit.co"
+
+# iOS specific settings
+ios:
+  bundle_identifier: "co.shemanit.shemanit"
+  team_id: "YOUR_TEAM_ID"  # Replace with your actual team ID
+  deployment_target: "12.0"
+  minimum_version: "12.0"
+  
+# Android specific settings
+android:
+  application_id: "co.shemanit.shemanit"
+  min_sdk_version: "21"
+  target_sdk_version: "34"
+  compile_sdk_version: "34"
+  
+# Flutter settings
+flutter:
+  sdk_version: "^3.5.0"
+  
+# Build flavors
+flavors:
+  production:
+    name: "Production"
+    suffix: ""
+    app_name: "shemanit"
+  staging:
+    name: "Staging"
+    suffix: ".stg"
+    app_name: "[STG] shemanit"
+  development:
+    name: "Development"
+    suffix: ".dev"
+    app_name: "[DEV] shemanit"
+    
+# Features and capabilities
+features:
+  analytics: true
+  crash_reporting: true
+  push_notifications: false
+  biometric_auth: false
+  
+# Dependencies (can be toggled on/off)
+dependencies:
+  bloc: true
+  dio: true
+  shared_preferences: true
+  graphql: false
+  retrofit: false

@@ -1,0 +1,103 @@
+# Project Configuration Template
+# Copy this file to project_config.yaml and customize it for your project
+# Then run: ./scripts/configure.sh
+
+project:
+  # Basic project information
+  name: "My Awesome App"                    # App name (will be converted to package name)
+  description: "A fantastic Flutter application with DDD architecture"
+  version: "1.0.0"                          # App version
+  build_number: "1"                          # Build number
+  
+  # Package name (used for Android and iOS bundle identifier)
+  # Format: com.company.appname (lowercase, no spaces)
+  package_name: "com.mycompany.myawesomeapp"
+  
+  # App display name (shown on device home screen)
+  display_name: "My Awesome App"
+  
+  # Company/Organization details
+  company:
+    name: "My Company Inc."
+    website: "https://mycompany.com"
+    email: "contact@mycompany.com"
+  
+  # iOS specific settings
+  ios:
+    bundle_identifier: "com.mycompany.myawesomeapp"  # Must match package_name
+    team_id: "YOUR_TEAM_ID"                         # Your Apple Developer Team ID
+    deployment_target: "12.0"                        # Minimum iOS version
+    minimum_version: "12.0"                          # Same as deployment_target
+    
+  # Android specific settings
+  android:
+    application_id: "com.mycompany.myawesomeapp"     # Must match package_name
+    min_sdk_version: "21"                            # Minimum Android API level
+    target_sdk_version: "34"                         # Target Android API level
+    compile_sdk_version: "34"                        # Compile Android API level
+    
+  # Flutter settings
+  flutter:
+    sdk_version: "^3.5.0"                           # Flutter SDK version constraint
+    
+  # Build flavors - customize these for your needs
+  flavors:
+    production:
+      name: "Production"
+      suffix: ""                                     # No suffix for production
+      app_name: "My Awesome App"
+    staging:
+      name: "Staging"
+      suffix: ".stg"                                 # .stg suffix for staging
+      app_name: "[STG] My Awesome App"
+    development:
+      name: "Development"
+      suffix: ".dev"                                 # .dev suffix for development
+      app_name: "[DEV] My Awesome App"
+      
+  # Features and capabilities - toggle these on/off
+  features:
+    analytics: true                                  # Enable analytics
+    crash_reporting: true                            # Enable crash reporting
+    push_notifications: false                        # Disable push notifications
+    biometric_auth: false                            # Disable biometric authentication
+    
+  # Dependencies - toggle these on/off
+  dependencies:
+    bloc: true                                       # BLoC state management
+    dio: true                                        # HTTP client
+    shared_preferences: true                          # Local storage
+    graphql: false                                   # GraphQL client
+    retrofit: false                                  # REST API client
+
+# Example configurations for different project types:
+
+# E-commerce App:
+# project:
+#   name: "ShopSmart"
+#   package_name: "com.shopmart.app"
+#   display_name: "ShopSmart"
+#   company:
+#     name: "ShopSmart Inc."
+#     website: "https://shopmart.com"
+#     email: "support@shopmart.com"
+
+# Social Media App:
+# project:
+#   name: "SocialConnect"
+#   package_name: "com.socialconnect.app"
+#   display_name: "SocialConnect"
+#   company:
+#     name: "SocialConnect LLC"
+#     website: "https://socialconnect.com"
+#     email: "hello@socialconnect.com"
+
+# Banking App:
+# project:
+#   name: "SecureBank"
+#   package_name: "com.securebank.app"
+#   display_name: "SecureBank"
+#   company:
+#     name: "SecureBank Corp."
+#     website: "https://securebank.com"
+#     email: "security@securebank.com"
