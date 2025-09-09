@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shemanit/features/counter/domain/entities/counter_entity.dart';
+import 'package:robbie_starter/features/counter/domain/entities/counter_entity.dart';
 
 void main() {
   group('CounterEntity', () {

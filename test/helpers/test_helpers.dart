@@ -2,9 +2,9 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shemanit/features/counter/domain/entities/counter_entity.dart';
-import 'package:shemanit/features/counter/infrastructure/models/counter_model.dart';
-import 'package:shemanit/features/counter/presentation/cubits/counter_cubit.dart';
+import 'package:robbie_starter/features/counter/domain/entities/counter_entity.dart';
+import 'package:robbie_starter/features/counter/infrastructure/models/counter_model.dart';
+import 'package:robbie_starter/features/counter/presentation/cubits/counter_cubit.dart';
 
 /// Test helper utilities
 class TestHelpers {

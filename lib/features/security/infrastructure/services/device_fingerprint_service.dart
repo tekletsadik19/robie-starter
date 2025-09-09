@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:shemanit/features/security/domain/value_objects/device_fingerprint.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/device_fingerprint.dart';
 
 class DeviceFingerprintService {
   const DeviceFingerprintService(this._deviceInfo, this._packageInfo);

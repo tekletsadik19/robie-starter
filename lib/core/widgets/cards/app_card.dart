@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:shemanit/core/responsive/responsive_utils.dart';
+import 'package:robbie_starter/core/responsive/responsive_utils.dart';
 
 /// Enumeration for card variants
 enum AppCardVariant {

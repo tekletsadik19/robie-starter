@@ -1,8 +1,8 @@
-import 'package:shemanit/features/security/domain/entities/security_status.dart';
-import 'package:shemanit/features/security/domain/value_objects/security_threat_level.dart';
-import 'package:shemanit/features/security/domain/aggregates/security_assessment.dart';
-import 'package:shemanit/features/security/domain/value_objects/security_threat.dart';
-import 'package:shemanit/features/security/domain/value_objects/device_fingerprint.dart';
+import 'package:robbie_starter/features/security/domain/entities/security_status.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/security_threat_level.dart';
+import 'package:robbie_starter/features/security/domain/aggregates/security_assessment.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/security_threat.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/device_fingerprint.dart';
 
 class SecurityStatusModel {
   const SecurityStatusModel({

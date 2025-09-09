@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:shemanit/core/responsive/responsive_utils.dart';
-import 'package:shemanit/core/widgets/hooks/use_theme.dart';
+import 'package:robbie_starter/core/responsive/responsive_utils.dart';
+import 'package:robbie_starter/core/widgets/hooks/use_theme.dart';
 
 /// Navigation drawer item data class
 class AppNavigationItem {

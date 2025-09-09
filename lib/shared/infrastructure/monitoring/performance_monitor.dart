@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:injectable/injectable.dart';
-import 'package:shemanit/core/utils/logger.dart';
-import 'package:shemanit/shared/infrastructure/monitoring/analytics_service.dart';
+import 'package:robbie_starter/core/utils/logger.dart';
+import 'package:robbie_starter/shared/infrastructure/monitoring/analytics_service.dart';
 
 /// Performance metrics
 class PerformanceMetrics {

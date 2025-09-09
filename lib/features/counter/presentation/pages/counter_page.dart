@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shemanit/core/di/injection_container.dart';
-import 'package:shemanit/features/counter/presentation/cubits/counter_cubit.dart';
-import 'package:shemanit/features/counter/presentation/widgets/counter_view.dart';
-import 'package:shemanit/l10n/l10n.dart';
+import 'package:robbie_starter/core/di/injection_container.dart';
+import 'package:robbie_starter/features/counter/presentation/cubits/counter_cubit.dart';
+import 'package:robbie_starter/features/counter/presentation/widgets/counter_view.dart';
+import 'package:robbie_starter/l10n/l10n.dart';
 
 /// Counter page with dependency injection
 class CounterPage extends StatelessWidget {

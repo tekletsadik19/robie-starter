@@ -1,4 +1,4 @@
-import 'package:shemanit/core/errors/exceptions.dart';
+import 'package:robbie_starter/core/errors/exceptions.dart';
 
 /// Base interface for all data sources
 /// Enforces consistent error handling and operation patterns

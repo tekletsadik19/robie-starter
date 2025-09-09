@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'package:jailbreak_root_detection/jailbreak_root_detection.dart';
-import 'package:shemanit/features/security/domain/services/security_assessment_service.dart';
+import 'package:robbie_starter/features/security/domain/services/security_assessment_service.dart';
 
 class PlatformSecurityDetectionService implements ISecurityDetectionService {
   const PlatformSecurityDetectionService();

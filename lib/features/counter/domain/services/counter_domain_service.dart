@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-import 'package:shemanit/core/errors/failures.dart';
-import 'package:shemanit/features/counter/domain/entities/counter_entity.dart';
-import 'package:shemanit/features/counter/domain/value_objects/counter_value.dart';
-import 'package:shemanit/shared/domain/services/base_domain_service.dart';
+import 'package:robbie_starter/core/errors/failures.dart';
+import 'package:robbie_starter/features/counter/domain/entities/counter_entity.dart';
+import 'package:robbie_starter/features/counter/domain/value_objects/counter_value.dart';
+import 'package:robbie_starter/shared/domain/services/base_domain_service.dart';
 
 /// Domain service for counter business logic
 @singleton

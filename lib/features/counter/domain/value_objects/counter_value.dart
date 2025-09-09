@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:shemanit/core/errors/failures.dart';
-import 'package:shemanit/shared/domain/value_objects/base_value_object.dart';
+import 'package:robbie_starter/core/errors/failures.dart';
+import 'package:robbie_starter/shared/domain/value_objects/base_value_object.dart';
 
 /// Counter value object with validation
 class CounterValue extends ValidatedValueObject<int> {

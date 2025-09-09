@@ -1,8 +1,8 @@
 import 'package:equatable/equatable.dart';
-import 'package:shemanit/features/security/domain/value_objects/threat_level.dart';
-import 'package:shemanit/features/security/domain/value_objects/security_threat.dart';
-import 'package:shemanit/features/security/domain/value_objects/device_fingerprint.dart';
-import 'package:shemanit/features/security/domain/events/security_event.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/threat_level.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/security_threat.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/device_fingerprint.dart';
+import 'package:robbie_starter/features/security/domain/events/security_event.dart';
 
 class SecurityAssessment extends Equatable {
   factory SecurityAssessment.create({

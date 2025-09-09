@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:shemanit/core/errors/failures.dart';
-import 'package:shemanit/features/security/domain/aggregates/app_update_policy.dart';
-import 'package:shemanit/features/security/domain/repositories/app_update_repository.dart';
-import 'package:shemanit/features/security/domain/services/app_update_service.dart';
-import 'package:shemanit/features/security/domain/value_objects/app_version.dart';
+import 'package:robbie_starter/core/errors/failures.dart';
+import 'package:robbie_starter/features/security/domain/aggregates/app_update_policy.dart';
+import 'package:robbie_starter/features/security/domain/repositories/app_update_repository.dart';
+import 'package:robbie_starter/features/security/domain/services/app_update_service.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/app_version.dart';
 
 class AppUpdateRepositoryImpl implements AppUpdateRepository {
   const AppUpdateRepositoryImpl(this._appUpdateService);

@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:shemanit/features/security/infrastructure/models/app_version_model.dart';
+import 'package:robbie_starter/features/security/infrastructure/models/app_version_model.dart';
 
 abstract class AppUpdateDataSource {
   Future<AppVersionModel> checkForUpdates();

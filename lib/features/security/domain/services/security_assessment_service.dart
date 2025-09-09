@@ -1,6 +1,6 @@
-import 'package:shemanit/features/security/domain/aggregates/security_assessment.dart';
-import 'package:shemanit/features/security/domain/value_objects/device_fingerprint.dart';
-import 'package:shemanit/features/security/domain/value_objects/security_threat.dart';
+import 'package:robbie_starter/features/security/domain/aggregates/security_assessment.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/device_fingerprint.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/security_threat.dart';
 
 abstract class ISecurityDetectionService {
   Future<bool> isDeviceJailbroken();

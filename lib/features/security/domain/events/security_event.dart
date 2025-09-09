@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
-import 'package:shemanit/features/security/domain/value_objects/security_threat.dart';
-import 'package:shemanit/features/security/domain/value_objects/threat_level.dart';
-import 'package:shemanit/features/security/domain/value_objects/device_fingerprint.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/security_threat.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/threat_level.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/device_fingerprint.dart';
 
 abstract class SecurityDomainEvent extends Equatable {
   const SecurityDomainEvent({required this.occurredAt});

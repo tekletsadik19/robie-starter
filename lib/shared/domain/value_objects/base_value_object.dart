@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:shemanit/core/errors/failures.dart';
+import 'package:robbie_starter/core/errors/failures.dart';
 
 /// Base class for all value objects
 abstract class BaseValueObject<T> extends Equatable {

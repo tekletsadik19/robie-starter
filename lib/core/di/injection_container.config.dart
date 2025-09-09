@@ -14,55 +14,55 @@ import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:package_info_plus/package_info_plus.dart' as _i655;
 import 'package:shared_preferences/shared_preferences.dart' as _i460;
-import 'package:shemanit/core/cache/cache_service.dart' as _i105;
-import 'package:shemanit/core/di/injection_container.dart' as _i67;
-import 'package:shemanit/core/theme/theme_cubit.dart' as _i819;
-import 'package:shemanit/features/counter/application/use_cases/decrement_counter_use_case.dart'
+import 'package:robbie_starter/core/cache/cache_service.dart' as _i105;
+import 'package:robbie_starter/core/di/injection_container.dart' as _i67;
+import 'package:robbie_starter/core/theme/theme_cubit.dart' as _i819;
+import 'package:robbie_starter/features/counter/application/use_cases/decrement_counter_use_case.dart'
     as _i112;
-import 'package:shemanit/features/counter/application/use_cases/get_counter_use_case.dart'
+import 'package:robbie_starter/features/counter/application/use_cases/get_counter_use_case.dart'
     as _i820;
-import 'package:shemanit/features/counter/application/use_cases/increment_counter_use_case.dart'
+import 'package:robbie_starter/features/counter/application/use_cases/increment_counter_use_case.dart'
     as _i730;
-import 'package:shemanit/features/counter/application/use_cases/reset_counter_use_case.dart'
+import 'package:robbie_starter/features/counter/application/use_cases/reset_counter_use_case.dart'
     as _i387;
-import 'package:shemanit/features/counter/domain/repositories/counter_repository.dart'
+import 'package:robbie_starter/features/counter/domain/repositories/counter_repository.dart'
     as _i79;
-import 'package:shemanit/features/counter/domain/services/counter_domain_service.dart'
+import 'package:robbie_starter/features/counter/domain/services/counter_domain_service.dart'
     as _i345;
-import 'package:shemanit/features/counter/infrastructure/datasources/counter_local_data_source.dart'
+import 'package:robbie_starter/features/counter/infrastructure/datasources/counter_local_data_source.dart'
     as _i322;
-import 'package:shemanit/features/counter/infrastructure/repositories/counter_repository_impl.dart'
+import 'package:robbie_starter/features/counter/infrastructure/repositories/counter_repository_impl.dart'
     as _i476;
-import 'package:shemanit/features/counter/presentation/cubits/counter_cubit.dart'
+import 'package:robbie_starter/features/counter/presentation/cubits/counter_cubit.dart'
     as _i148;
-import 'package:shemanit/features/security/application/blocs/security_bloc.dart'
+import 'package:robbie_starter/features/security/application/blocs/security_bloc.dart'
     as _i844;
-import 'package:shemanit/features/security/di/security_injection.dart' as _i777;
-import 'package:shemanit/features/security/domain/repositories/app_update_repository.dart'
+import 'package:robbie_starter/features/security/di/security_injection.dart' as _i777;
+import 'package:robbie_starter/features/security/domain/repositories/app_update_repository.dart'
     as _i89;
-import 'package:shemanit/features/security/domain/repositories/security_repository.dart'
+import 'package:robbie_starter/features/security/domain/repositories/security_repository.dart'
     as _i215;
-import 'package:shemanit/features/security/domain/services/app_update_service.dart'
+import 'package:robbie_starter/features/security/domain/services/app_update_service.dart'
     as _i31;
-import 'package:shemanit/features/security/domain/services/security_assessment_service.dart'
+import 'package:robbie_starter/features/security/domain/services/security_assessment_service.dart'
     as _i638;
-import 'package:shemanit/features/security/domain/usecases/check_for_updates.dart'
+import 'package:robbie_starter/features/security/domain/usecases/check_for_updates.dart'
     as _i719;
-import 'package:shemanit/features/security/domain/usecases/check_security_status.dart'
+import 'package:robbie_starter/features/security/domain/usecases/check_security_status.dart'
     as _i1072;
-import 'package:shemanit/features/security/infrastructure/services/device_fingerprint_service.dart'
+import 'package:robbie_starter/features/security/infrastructure/services/device_fingerprint_service.dart'
     as _i841;
-import 'package:shemanit/shared/infrastructure/caching/cache_manager.dart'
+import 'package:robbie_starter/shared/infrastructure/caching/cache_manager.dart'
     as _i93;
-import 'package:shemanit/shared/infrastructure/monitoring/analytics_service.dart'
+import 'package:robbie_starter/shared/infrastructure/monitoring/analytics_service.dart'
     as _i63;
-import 'package:shemanit/shared/infrastructure/monitoring/performance_monitor.dart'
+import 'package:robbie_starter/shared/infrastructure/monitoring/performance_monitor.dart'
     as _i363;
-import 'package:shemanit/shared/infrastructure/network/api_client.dart'
+import 'package:robbie_starter/shared/infrastructure/network/api_client.dart'
     as _i491;
-import 'package:shemanit/shared/infrastructure/security/encryption_service.dart'
+import 'package:robbie_starter/shared/infrastructure/security/encryption_service.dart'
     as _i649;
-import 'package:shemanit/shared/infrastructure/security/secure_storage.dart'
+import 'package:robbie_starter/shared/infrastructure/security/secure_storage.dart'
     as _i24;
 
 extension GetItInjectableX on _i174.GetIt {

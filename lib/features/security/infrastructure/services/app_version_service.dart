@@ -1,6 +1,6 @@
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:shemanit/features/security/domain/services/app_update_service.dart';
-import 'package:shemanit/features/security/domain/value_objects/app_version.dart';
+import 'package:robbie_starter/features/security/domain/services/app_update_service.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/app_version.dart';
 
 class AppVersionService implements IAppVersionRepository {
   const AppVersionService(this._packageInfo);

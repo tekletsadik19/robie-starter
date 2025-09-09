@@ -1,6 +1,6 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:shemanit/core/cache/cache_service.dart';
-import 'package:shemanit/core/di/injection_container.dart';
+import 'package:robbie_starter/core/cache/cache_service.dart';
+import 'package:robbie_starter/core/di/injection_container.dart';
 
 /// Hook for interacting with cache service
 ({

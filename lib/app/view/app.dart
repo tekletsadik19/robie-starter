@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-import 'package:shemanit/core/di/injection_container.dart';
-import 'package:shemanit/core/theme/app_theme.dart';
-import 'package:shemanit/core/theme/theme_cubit.dart';
-import 'package:shemanit/features/counter/presentation/pages/counter_page.dart';
-import 'package:shemanit/l10n/l10n.dart';
+import 'package:robbie_starter/core/di/injection_container.dart';
+import 'package:robbie_starter/core/theme/app_theme.dart';
+import 'package:robbie_starter/core/theme/theme_cubit.dart';
+import 'package:robbie_starter/features/counter/presentation/pages/counter_page.dart';
+import 'package:robbie_starter/l10n/l10n.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

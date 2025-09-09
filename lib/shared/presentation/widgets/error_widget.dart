@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shemanit/core/responsive/responsive_utils.dart';
+import 'package:robbie_starter/core/responsive/responsive_utils.dart';
 
 /// Reusable error widget with accessibility and responsive design
 class AppErrorWidget extends StatelessWidget {

@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:shemanit/features/counter/domain/entities/counter_entity.dart';
+import 'package:robbie_starter/features/counter/domain/entities/counter_entity.dart';
 
 part 'counter_model.freezed.dart';
 part 'counter_model.g.dart';

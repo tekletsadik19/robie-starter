@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:shemanit/features/security/domain/value_objects/threat_level.dart';
-import 'package:shemanit/features/security/domain/aggregates/security_assessment.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/threat_level.dart';
+import 'package:robbie_starter/features/security/domain/aggregates/security_assessment.dart';
 
 class SecurityStatus extends Equatable {
   const SecurityStatus({

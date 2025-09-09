@@ -3,33 +3,33 @@
 # Run the configure script to apply these changes
 
 project:
-  name: "shemanit"
-  description: "A fantastic Flutter application by shemanit.co"
+  name: "robbie_starter"
+  description: "A fantastic Flutter application by robbie-starter"
   version: "1.0.0"
   build_number: "1"
   
   # Package name (used for Android and iOS bundle identifier)
-  package_name: "co.shemanit.shemanit"
+  package_name: "com.robbie.starter"
   
   # App display name (shown on device)
-  display_name: "shemanit"
+  display_name: "Robbie Starter"
   
   # Company/Organization details
   company:
-    name: "shemanit.co"
-    website: "https://shemanit.co"
-    email: "contact@shemanit.co"
+    name: "Robbie Starter"
+    website: "https://robbie-starter.com"
+    email: "contact@robbie-starter.com"
 
 # iOS specific settings
 ios:
-  bundle_identifier: "co.shemanit.shemanit"
+  bundle_identifier: "com.robbie.starter"
   team_id: "YOUR_TEAM_ID"  # Replace with your actual team ID
   deployment_target: "12.0"
   minimum_version: "12.0"
   
 # Android specific settings
 android:
-  application_id: "co.shemanit.shemanit"
+  application_id: "com.robbie.starter"
   min_sdk_version: "21"
   target_sdk_version: "34"
   compile_sdk_version: "34"
@@ -43,15 +43,15 @@ flavors:
   production:
     name: "Production"
     suffix: ""
-    app_name: "shemanit"
+    app_name: "Robbie Starter"
   staging:
     name: "Staging"
     suffix: ".stg"
-    app_name: "[STG] shemanit"
+    app_name: "[STG] Robbie Starter"
   development:
     name: "Development"
     suffix: ".dev"
-    app_name: "[DEV] shemanit"
+    app_name: "[DEV] Robbie Starter"
     
 # Features and capabilities
 features:
@@ -65,5 +65,5 @@ dependencies:
   bloc: true
   dio: true
   shared_preferences: true
-  graphql: false
+  graphql: true
   retrofit: false

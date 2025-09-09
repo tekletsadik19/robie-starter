@@ -1,13 +1,13 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:shemanit/core/utils/logger.dart';
-import 'package:shemanit/features/counter/application/use_cases/decrement_counter_use_case.dart';
-import 'package:shemanit/features/counter/application/use_cases/get_counter_use_case.dart';
-import 'package:shemanit/features/counter/application/use_cases/increment_counter_use_case.dart';
-import 'package:shemanit/features/counter/application/use_cases/reset_counter_use_case.dart';
-import 'package:shemanit/features/counter/domain/entities/counter_entity.dart';
-import 'package:shemanit/shared/application/use_cases/base_use_case.dart';
+import 'package:robbie_starter/core/utils/logger.dart';
+import 'package:robbie_starter/features/counter/application/use_cases/decrement_counter_use_case.dart';
+import 'package:robbie_starter/features/counter/application/use_cases/get_counter_use_case.dart';
+import 'package:robbie_starter/features/counter/application/use_cases/increment_counter_use_case.dart';
+import 'package:robbie_starter/features/counter/application/use_cases/reset_counter_use_case.dart';
+import 'package:robbie_starter/features/counter/domain/entities/counter_entity.dart';
+import 'package:robbie_starter/shared/application/use_cases/base_use_case.dart';
 
 part 'counter_cubit.freezed.dart';
 part 'counter_state.dart';

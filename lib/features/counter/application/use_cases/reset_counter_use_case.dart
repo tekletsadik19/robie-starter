@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-import 'package:shemanit/core/errors/failures.dart';
-import 'package:shemanit/core/utils/logger.dart';
-import 'package:shemanit/features/counter/domain/entities/counter_entity.dart';
-import 'package:shemanit/features/counter/domain/repositories/counter_repository.dart';
-import 'package:shemanit/shared/application/use_cases/base_use_case.dart';
+import 'package:robbie_starter/core/errors/failures.dart';
+import 'package:robbie_starter/core/utils/logger.dart';
+import 'package:robbie_starter/features/counter/domain/entities/counter_entity.dart';
+import 'package:robbie_starter/features/counter/domain/repositories/counter_repository.dart';
+import 'package:robbie_starter/shared/application/use_cases/base_use_case.dart';
 
 /// Parameters for reset counter use case
 class ResetCounterParams extends UseCaseParams {

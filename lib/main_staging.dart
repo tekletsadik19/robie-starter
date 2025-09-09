@@ -1,7 +1,7 @@
-import 'package:shemanit/app/app.dart';
-import 'package:shemanit/bootstrap.dart';
-import 'package:shemanit/core/config/app_config.dart';
-import 'package:shemanit/core/constants/environment.dart';
+import 'package:robbie_starter/app/app.dart';
+import 'package:robbie_starter/bootstrap.dart';
+import 'package:robbie_starter/core/config/app_config.dart';
+import 'package:robbie_starter/core/constants/environment.dart';
 
 void main() {
   // Initialize staging configuration

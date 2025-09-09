@@ -3,8 +3,8 @@ import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:shemanit/core/di/injection_container.config.dart';
-import 'package:shemanit/shared/infrastructure/security/encryption_service.dart';
+import 'package:robbie_starter/core/di/injection_container.config.dart';
+import 'package:robbie_starter/shared/infrastructure/security/encryption_service.dart';
 
 /// Service locator instance
 final GetIt sl = GetIt.instance;

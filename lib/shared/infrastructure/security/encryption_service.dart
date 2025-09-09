@@ -5,7 +5,7 @@ import 'dart:typed_data';
 import 'package:crypto/crypto.dart';
 import 'package:hive/hive.dart';
 import 'package:injectable/injectable.dart';
-import 'package:shemanit/core/utils/logger.dart';
+import 'package:robbie_starter/core/utils/logger.dart';
 
 /// Encryption service for Hive using SHA-256
 @singleton

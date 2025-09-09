@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:shemanit/features/security/domain/value_objects/app_version.dart';
-import 'package:shemanit/features/security/domain/events/security_event.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/app_version.dart';
+import 'package:robbie_starter/features/security/domain/events/security_event.dart';
 
 enum UpdatePriority {
   optional,

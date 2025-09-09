@@ -2,9 +2,9 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shemanit/core/accessibility/accessibility_utils.dart';
-import 'package:shemanit/core/responsive/responsive_utils.dart';
-import 'package:shemanit/core/theme/theme_cubit.dart';
+import 'package:robbie_starter/core/accessibility/accessibility_utils.dart';
+import 'package:robbie_starter/core/responsive/responsive_utils.dart';
+import 'package:robbie_starter/core/theme/theme_cubit.dart';
 
 /// Platform-adaptive app bar with theme switching
 class AppAppBar extends StatelessWidget implements PreferredSizeWidget {

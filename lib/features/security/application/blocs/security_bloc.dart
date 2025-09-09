@@ -1,10 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:shemanit/features/security/domain/aggregates/app_update_policy.dart';
-import 'package:shemanit/features/security/domain/aggregates/security_assessment.dart';
-import 'package:shemanit/shared/application/use_cases/base_use_case.dart';
-import 'package:shemanit/features/security/domain/usecases/check_security_status.dart';
-import 'package:shemanit/features/security/domain/usecases/check_for_updates.dart';
+import 'package:robbie_starter/features/security/domain/aggregates/app_update_policy.dart';
+import 'package:robbie_starter/features/security/domain/aggregates/security_assessment.dart';
+import 'package:robbie_starter/shared/application/use_cases/base_use_case.dart';
+import 'package:robbie_starter/features/security/domain/usecases/check_security_status.dart';
+import 'package:robbie_starter/features/security/domain/usecases/check_for_updates.dart';
 
 part 'security_event.dart';
 part 'security_state.dart';

@@ -1,5 +1,5 @@
-import 'package:shemanit/features/security/domain/aggregates/app_update_policy.dart';
-import 'package:shemanit/features/security/domain/value_objects/app_version.dart';
+import 'package:robbie_starter/features/security/domain/aggregates/app_update_policy.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/app_version.dart';
 
 abstract class IAppVersionRepository {
   Future<AppVersion> getCurrentVersion();

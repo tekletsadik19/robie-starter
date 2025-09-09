@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:shemanit/core/config/app_config.dart';
-import 'package:shemanit/core/debug/debug_utils.dart';
+import 'package:robbie_starter/core/config/app_config.dart';
+import 'package:robbie_starter/core/debug/debug_utils.dart';
 
 /// Performance monitoring utilities
 class PerformanceMonitor {

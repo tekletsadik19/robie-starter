@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:shemanit/core/config/app_config.dart';
-import 'package:shemanit/core/debug/debug_utils.dart';
-import 'package:shemanit/core/debug/performance_monitor.dart';
+import 'package:robbie_starter/core/config/app_config.dart';
+import 'package:robbie_starter/core/debug/debug_utils.dart';
+import 'package:robbie_starter/core/debug/performance_monitor.dart';
 
 /// Development panel for debugging and testing
 class DevPanel extends StatefulWidget {

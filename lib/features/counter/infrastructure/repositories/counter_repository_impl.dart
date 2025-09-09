@@ -1,12 +1,12 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-import 'package:shemanit/core/errors/exceptions.dart';
-import 'package:shemanit/core/errors/failures.dart';
-import 'package:shemanit/core/utils/logger.dart';
-import 'package:shemanit/features/counter/domain/entities/counter_entity.dart';
-import 'package:shemanit/features/counter/domain/repositories/counter_repository.dart';
-import 'package:shemanit/features/counter/infrastructure/datasources/counter_local_data_source.dart';
-import 'package:shemanit/features/counter/infrastructure/models/counter_model.dart';
+import 'package:robbie_starter/core/errors/exceptions.dart';
+import 'package:robbie_starter/core/errors/failures.dart';
+import 'package:robbie_starter/core/utils/logger.dart';
+import 'package:robbie_starter/features/counter/domain/entities/counter_entity.dart';
+import 'package:robbie_starter/features/counter/domain/repositories/counter_repository.dart';
+import 'package:robbie_starter/features/counter/infrastructure/datasources/counter_local_data_source.dart';
+import 'package:robbie_starter/features/counter/infrastructure/models/counter_model.dart';
 
 @Singleton(as: CounterRepository)
 class CounterRepositoryImpl implements CounterRepository {

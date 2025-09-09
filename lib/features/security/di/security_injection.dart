@@ -2,18 +2,18 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:injectable/injectable.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
-import 'package:shemanit/features/security/application/blocs/security_bloc.dart';
-import 'package:shemanit/features/security/domain/repositories/app_update_repository.dart';
-import 'package:shemanit/features/security/domain/repositories/security_repository.dart';
-import 'package:shemanit/features/security/domain/services/app_update_service.dart';
-import 'package:shemanit/features/security/domain/services/security_assessment_service.dart';
-import 'package:shemanit/features/security/domain/usecases/check_for_updates.dart';
-import 'package:shemanit/features/security/domain/usecases/check_security_status.dart';
-import 'package:shemanit/features/security/infrastructure/repositories/app_update_repository_impl.dart';
-import 'package:shemanit/features/security/infrastructure/repositories/security_repository_impl.dart';
-import 'package:shemanit/features/security/infrastructure/services/app_version_service.dart';
-import 'package:shemanit/features/security/infrastructure/services/device_fingerprint_service.dart';
-import 'package:shemanit/features/security/infrastructure/services/platform_security_detection_service.dart';
+import 'package:robbie_starter/features/security/application/blocs/security_bloc.dart';
+import 'package:robbie_starter/features/security/domain/repositories/app_update_repository.dart';
+import 'package:robbie_starter/features/security/domain/repositories/security_repository.dart';
+import 'package:robbie_starter/features/security/domain/services/app_update_service.dart';
+import 'package:robbie_starter/features/security/domain/services/security_assessment_service.dart';
+import 'package:robbie_starter/features/security/domain/usecases/check_for_updates.dart';
+import 'package:robbie_starter/features/security/domain/usecases/check_security_status.dart';
+import 'package:robbie_starter/features/security/infrastructure/repositories/app_update_repository_impl.dart';
+import 'package:robbie_starter/features/security/infrastructure/repositories/security_repository_impl.dart';
+import 'package:robbie_starter/features/security/infrastructure/services/app_version_service.dart';
+import 'package:robbie_starter/features/security/infrastructure/services/device_fingerprint_service.dart';
+import 'package:robbie_starter/features/security/infrastructure/services/platform_security_detection_service.dart';
 
 @module
 abstract class SecurityModule {

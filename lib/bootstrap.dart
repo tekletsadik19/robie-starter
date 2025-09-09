@@ -4,11 +4,11 @@ import 'dart:developer';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-import 'package:shemanit/core/cache/cache_service.dart';
-import 'package:shemanit/core/config/app_config.dart';
-import 'package:shemanit/core/debug/debug_utils.dart';
-import 'package:shemanit/core/debug/performance_monitor.dart';
-import 'package:shemanit/core/di/injection_container.dart';
+import 'package:robbie_starter/core/cache/cache_service.dart';
+import 'package:robbie_starter/core/config/app_config.dart';
+import 'package:robbie_starter/core/debug/debug_utils.dart';
+import 'package:robbie_starter/core/debug/performance_monitor.dart';
+import 'package:robbie_starter/core/di/injection_container.dart';
 
 class AppBlocObserver extends BlocObserver {
   const AppBlocObserver();

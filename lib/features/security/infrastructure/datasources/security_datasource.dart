@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:jailbreak_root_detection/jailbreak_root_detection.dart';
-import 'package:shemanit/features/security/infrastructure/models/security_status_model.dart';
+import 'package:robbie_starter/features/security/infrastructure/models/security_status_model.dart';
 
 abstract class SecurityDataSource {
   Future<SecurityStatusModel> checkSecurityStatus();

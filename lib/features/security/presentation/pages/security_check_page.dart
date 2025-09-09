@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shemanit/features/security/application/blocs/security_bloc.dart';
-import 'package:shemanit/features/security/domain/aggregates/security_assessment.dart';
-import 'package:shemanit/features/security/domain/aggregates/app_update_policy.dart';
-import 'package:shemanit/features/security/domain/entities/security_status.dart';
-import 'package:shemanit/features/security/presentation/widgets/security_warning_dialog.dart';
+import 'package:robbie_starter/features/security/application/blocs/security_bloc.dart';
+import 'package:robbie_starter/features/security/domain/aggregates/security_assessment.dart';
+import 'package:robbie_starter/features/security/domain/aggregates/app_update_policy.dart';
+import 'package:robbie_starter/features/security/domain/entities/security_status.dart';
+import 'package:robbie_starter/features/security/presentation/widgets/security_warning_dialog.dart';
 
 class SecurityCheckPage extends StatefulWidget {
   const SecurityCheckPage({

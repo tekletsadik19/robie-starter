@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
-import 'package:shemanit/core/errors/failures.dart';
-import 'package:shemanit/features/security/domain/aggregates/security_assessment.dart';
-import 'package:shemanit/features/security/domain/repositories/security_repository.dart';
-import 'package:shemanit/features/security/domain/services/security_assessment_service.dart';
-import 'package:shemanit/features/security/domain/value_objects/device_fingerprint.dart';
-import 'package:shemanit/features/security/infrastructure/services/device_fingerprint_service.dart';
+import 'package:robbie_starter/core/errors/failures.dart';
+import 'package:robbie_starter/features/security/domain/aggregates/security_assessment.dart';
+import 'package:robbie_starter/features/security/domain/repositories/security_repository.dart';
+import 'package:robbie_starter/features/security/domain/services/security_assessment_service.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/device_fingerprint.dart';
+import 'package:robbie_starter/features/security/infrastructure/services/device_fingerprint_service.dart';
 
 class SecurityRepositoryImpl implements SecurityRepository {
   const SecurityRepositoryImpl(

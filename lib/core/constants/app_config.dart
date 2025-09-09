@@ -1,4 +1,4 @@
-import 'package:shemanit/core/constants/environment.dart';
+import 'package:robbie_starter/core/constants/environment.dart';
 
 /// Application configuration based on environment
 class AppConfig {

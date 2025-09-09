@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:hive/hive.dart';
 import 'package:injectable/injectable.dart';
-import 'package:shemanit/core/constants/app_constants.dart';
-import 'package:shemanit/core/errors/exceptions.dart';
-import 'package:shemanit/core/utils/logger.dart';
-import 'package:shemanit/shared/infrastructure/security/encryption_service.dart';
+import 'package:robbie_starter/core/constants/app_constants.dart';
+import 'package:robbie_starter/core/errors/exceptions.dart';
+import 'package:robbie_starter/core/utils/logger.dart';
+import 'package:robbie_starter/shared/infrastructure/security/encryption_service.dart';
 
 /// Cache entry with expiration
 class CacheEntry<T> {

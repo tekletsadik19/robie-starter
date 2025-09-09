@@ -1,58 +1,36 @@
-# shemanit
+# robbie_starter
 
-A fantastic Flutter application by shemanit.co
+A fantastic Flutter application by robbie-starter
 
 ## Configuration
 
 This project was configured using the automated configuration system.
 
 ### Project Details
-- **Name**: shemanit
-- **Description**: A fantastic Flutter application by shemanit.co
-- **Version**: 1.0.0+1
+- **Name**: robbie_starter
+- **Version**: 1.0.0
+- **Package**: com.robbie.starter
+- **Company**: Robbie Starter
+
+### Build Flavors
+- **Production**: Robbie Starter
+- **Staging**: [STG] Robbie Starter
+- **Development**: [DEV] Robbie Starter
 
 ### Features
-- Clean Architecture with Domain-Driven Design
-- State Management with BLoC
-- Dependency Injection with GetIt and Injectable
-- Secure caching with Hive and SHA-256 encryption
-- Comprehensive error handling
-- Internationalization support
-- Testing setup with comprehensive test coverage
+- ✅ Analytics
+- ✅ Crash Reporting
+- ❌ Push Notifications
+- ❌ Biometric Auth
 
-### Getting Started
+## Development
 
-1. **Install dependencies**:
-   ```bash
-   fvm flutter packages get
-   ```
+To modify the project configuration, edit `config/project_config.yaml` and run:
 
-2. **Run code generation**:
-   ```bash
-   fvm flutter packages pub run build_runner build --delete-conflicting-outputs
-   ```
+```bash
+python scripts/configure_project.py
+```
 
-3. **Run the app**:
-   ```bash
-   fvm flutter run
-   ```
-
-4. **Run tests**:
-   ```bash
-   fvm flutter test
-   ```
-
-### Architecture
-
-This project follows Clean Architecture principles with Domain-Driven Design:
-
-- **Domain Layer**: Entities, repositories, and use cases
-- **Infrastructure Layer**: Data sources, external services
-- **Application Layer**: Business logic and use cases
-- **Presentation Layer**: UI components and state management
-
-### Security
-
-- **Hive Database**: Encrypted local storage with SHA-256 security
-- **Data Integrity**: Built-in corruption detection and verification
-- **Secure Storage**: Separate encryption keys for different data types
+## Company Information
+- **Website**: https://robbie-starter.com
+- **Email**: contact@robbie-starter.com

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shemanit/core/theme/theme_cubit.dart';
+import 'package:robbie_starter/core/theme/theme_cubit.dart';
 
 /// Hook for accessing and managing theme state
 ({

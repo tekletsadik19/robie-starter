@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:shemanit/features/security/domain/entities/security_status.dart';
-import 'package:shemanit/features/security/domain/value_objects/app_version.dart';
-import 'package:shemanit/features/security/domain/value_objects/threat_level.dart';
-import 'package:shemanit/features/security/domain/value_objects/security_threat.dart';
+import 'package:robbie_starter/features/security/domain/entities/security_status.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/app_version.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/threat_level.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/security_threat.dart';
 
 class SecurityWarningDialog extends StatelessWidget {
   const SecurityWarningDialog({

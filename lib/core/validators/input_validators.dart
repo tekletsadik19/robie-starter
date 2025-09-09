@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:shemanit/core/errors/failures.dart';
+import 'package:robbie_starter/core/errors/failures.dart';
 
 /// Collection of input validation functions
 class InputValidators {

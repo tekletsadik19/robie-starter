@@ -216,30 +216,31 @@ class ProjectConfigurator:
     
     def update_dart_files(self):
         """Update Dart files with new package name"""
-        lib_dir = self.project_root / "lib"
-        if not lib_dir.exists():
-            print("❌ lib directory not found")
-            return
-        
-        # Since we're changing from ddd_flutter_app to shemanit, we know the old name
-        old_package_name = "ddd_flutter_app"
+        # Since we're changing from shemanit to robbie_starter, we know the old name
+        old_package_name = "shemanit"
         new_package_name = self.config["project"]["name"].lower().replace(" ", "_")
         
         print(f"🔄 Updating package imports from '{old_package_name}' to '{new_package_name}'")
         
-        # Update all Dart files
-        for dart_file in lib_dir.rglob("*.dart"):
-            
-            with open(dart_file, 'r', encoding='utf-8') as file:
-                content = file.read()
-            
-            # Update import statements
-            old_import = f'package:{old_package_name}/'
-            new_import = f'package:{new_package_name}/'
-            content = content.replace(old_import, new_import)
-            
-            with open(dart_file, 'w', encoding='utf-8') as file:
-                file.write(content)
+        # Update all Dart files in lib and test directories
+        for directory in ["lib", "test"]:
+            dir_path = self.project_root / directory
+            if not dir_path.exists():
+                print(f"❌ {directory} directory not found")
+                continue
+                
+            for dart_file in dir_path.rglob("*.dart"):
+                
+                with open(dart_file, 'r', encoding='utf-8') as file:
+                    content = file.read()
+                
+                # Update import statements
+                old_import = f'package:{old_package_name}/'
+                new_import = f'package:{new_package_name}/'
+                content = content.replace(old_import, new_import)
+                
+                with open(dart_file, 'w', encoding='utf-8') as file:
+                    file.write(content)
         
         print(f"✅ Updated Dart files with new package name")
     

@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:shemanit/features/security/domain/value_objects/app_version.dart';
+import 'package:robbie_starter/features/security/domain/value_objects/app_version.dart';
 
 part 'app_version_model.freezed.dart';
 part 'app_version_model.g.dart';
