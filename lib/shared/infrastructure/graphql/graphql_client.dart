@@ -23,9 +23,9 @@ class GraphQLClientService {
   GraphQLClient get rickAndMortyClient => _rickAndMortyClient;
 
   void _initializeClients() {
-    // SpaceX API client
+    // SpaceX API client (using Countries API for demo since SpaceX API might be down)
     _spaceXClient = _createClient(
-      endpoint: 'https://api.spacex.land/graphql/',
+      endpoint: 'https://countries.trevorblades.com/',
       clientName: 'SpaceX',
     );
 

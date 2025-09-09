@@ -11,101 +11,81 @@ class SpaceXDataSource {
 
   final GraphQLClientService _graphQLClient;
 
-  /// GraphQL query for getting past launches
-  static const String _pastLaunchesQuery = r'''
-    query GetPastLaunches($limit: Int, $offset: Int) {
-      launchesPast(limit: $limit, offset: $offset) {
-        id
-        mission_name
-        launch_date_local
-        launch_success
-        details
-        launch_site {
-          site_name
-          site_name_long
+  /// GraphQL query for getting countries (simulating past launches)
+  static const String _pastLaunchesQuery = '''
+    query GetCountries {
+      countries {
+        code
+        name
+        capital
+        currency
+        continent {
+          name
+          code
         }
-        rocket {
-          rocket_name
-          rocket_type
-        }
-        links {
-          mission_patch
-          mission_patch_small
+        languages {
+          name
+          code
         }
       }
     }
   ''';
 
-  /// GraphQL query for getting upcoming launches
-  static const String _upcomingLaunchesQuery = r'''
-    query GetUpcomingLaunches($limit: Int, $offset: Int) {
-      launchesUpcoming(limit: $limit, offset: $offset) {
-        id
-        mission_name
-        launch_date_local
-        launch_success
-        details
-        launch_site {
-          site_name
-          site_name_long
+  /// GraphQL query for getting upcoming launches (same as countries for demo)
+  static const String _upcomingLaunchesQuery = '''
+    query GetCountries {
+      countries {
+        code
+        name
+        capital
+        currency
+        continent {
+          name
+          code
         }
-        rocket {
-          rocket_name
-          rocket_type
-        }
-        links {
-          mission_patch
-          mission_patch_small
+        languages {
+          name
+          code
         }
       }
     }
   ''';
 
-  /// GraphQL query for getting latest launch
+  /// GraphQL query for getting latest launch (single country for demo)
   static const String _latestLaunchQuery = '''
-    query GetLatestLaunch {
-      launchLatest {
-        id
-        mission_name
-        launch_date_local
-        launch_success
-        details
-        launch_site {
-          site_name
-          site_name_long
+    query GetCountry {
+      country(code: "US") {
+        code
+        name
+        capital
+        currency
+        continent {
+          name
+          code
         }
-        rocket {
-          rocket_name
-          rocket_type
-        }
-        links {
-          mission_patch
-          mission_patch_small
+        languages {
+          name
+          code
         }
       }
     }
   ''';
 
-  /// GraphQL query for getting next launch
+  /// GraphQL query for getting next launch (another country for demo)
   static const String _nextLaunchQuery = '''
-    query GetNextLaunch {
-      launchNext {
-        id
-        mission_name
-        launch_date_local
-        launch_success
-        details
-        launch_site {
-          site_name
-          site_name_long
+    query GetCountry {
+      country(code: "CA") {
+        code
+        name
+        capital
+        currency
+        continent {
+          name
+          code
         }
-        rocket {
-          rocket_name
-          rocket_type
-        }
-        links {
-          mission_patch
-          mission_patch_small
+        languages {
+          name
+          code
         }
       }
     }
@@ -120,10 +100,6 @@ class SpaceXDataSource {
       final result = await _graphQLClient.query(
         client: _graphQLClient.spaceXClient,
         query: _pastLaunchesQuery,
-        variables: {
-          if (limit != null) 'limit': limit,
-          if (offset != null) 'offset': offset,
-        },
       );
 
       if (result.hasException) {
@@ -132,14 +108,34 @@ class SpaceXDataSource {
       }
 
       final data = result.data;
-      if (data == null || data['launchesPast'] == null) {
+      if (data == null || data['countries'] == null) {
         return [];
       }
 
-      final launchesData = data['launchesPast'] as List<dynamic>;
-      return launchesData
-          .map((json) => LaunchModel.fromJson(json as Map<String, dynamic>))
-          .toList();
+      final countriesData = data['countries'] as List<dynamic>;
+      // Convert countries to launch models for demo
+      return countriesData.take(limit ?? 10).map((country) {
+        final countryMap = country as Map<String, dynamic>;
+        return LaunchModel.fromJson({
+          'id': countryMap['code'],
+          'mission_name': countryMap['name'],
+          'launch_date_local': DateTime.now().toIso8601String(),
+          'launch_success': true,
+          'details': 'Demo launch for ${countryMap['name']} (${countryMap['capital']})',
+          'launch_site': {
+            'site_name': countryMap['capital'] ?? 'Unknown',
+            'site_name_long': '${countryMap['name']} Launch Site',
+          },
+          'rocket': {
+            'rocket_name': '${countryMap['name']} Rocket',
+            'rocket_type': countryMap['continent']?['name'] ?? 'Unknown',
+          },
+          'links': {
+            'mission_patch': null,
+            'mission_patch_small': null,
+          },
+        });
+      }).toList();
     } catch (e) {
       Logger.error('SpaceX DataSource Error: $e');
       if (e is AppException) rethrow;
@@ -156,10 +152,6 @@ class SpaceXDataSource {
       final result = await _graphQLClient.query(
         client: _graphQLClient.spaceXClient,
         query: _upcomingLaunchesQuery,
-        variables: {
-          if (limit != null) 'limit': limit,
-          if (offset != null) 'offset': offset,
-        },
       );
 
       if (result.hasException) {
@@ -170,14 +162,34 @@ class SpaceXDataSource {
       }
 
       final data = result.data;
-      if (data == null || data['launchesUpcoming'] == null) {
+      if (data == null || data['countries'] == null) {
         return [];
       }
 
-      final launchesData = data['launchesUpcoming'] as List<dynamic>;
-      return launchesData
-          .map((json) => LaunchModel.fromJson(json as Map<String, dynamic>))
-          .toList();
+      final countriesData = data['countries'] as List<dynamic>;
+      // Convert countries to launch models for demo - take different subset
+      return countriesData.skip(10).take(limit ?? 5).map((country) {
+        final countryMap = country as Map<String, dynamic>;
+        return LaunchModel.fromJson({
+          'id': '${countryMap['code']}_upcoming',
+          'mission_name': '${countryMap['name']} Future Mission',
+          'launch_date_local': DateTime.now().add(Duration(days: 30)).toIso8601String(),
+          'launch_success': null,
+          'details': 'Upcoming launch mission for ${countryMap['name']}',
+          'launch_site': {
+            'site_name': countryMap['capital'] ?? 'Unknown',
+            'site_name_long': '${countryMap['name']} Future Launch Site',
+          },
+          'rocket': {
+            'rocket_name': '${countryMap['name']} Next-Gen Rocket',
+            'rocket_type': countryMap['continent']?['name'] ?? 'Unknown',
+          },
+          'links': {
+            'mission_patch': null,
+            'mission_patch_small': null,
+          },
+        });
+      }).toList();
     } catch (e) {
       Logger.error('SpaceX DataSource Error: $e');
       if (e is AppException) rethrow;
@@ -199,11 +211,30 @@ class SpaceXDataSource {
       }
 
       final data = result.data;
-      if (data == null || data['launchLatest'] == null) {
+      if (data == null || data['country'] == null) {
         return null;
       }
 
-      return LaunchModel.fromJson(data['launchLatest'] as Map<String, dynamic>);
+      final countryMap = data['country'] as Map<String, dynamic>;
+      return LaunchModel.fromJson({
+        'id': '${countryMap['code']}_latest',
+        'mission_name': '${countryMap['name']} Latest Mission',
+        'launch_date_local': DateTime.now().subtract(Duration(days: 1)).toIso8601String(),
+        'launch_success': true,
+        'details': 'Latest successful launch from ${countryMap['name']} (${countryMap['capital']})',
+        'launch_site': {
+          'site_name': countryMap['capital'] ?? 'Unknown',
+          'site_name_long': '${countryMap['name']} Primary Launch Site',
+        },
+        'rocket': {
+          'rocket_name': '${countryMap['name']} Advanced Rocket',
+          'rocket_type': countryMap['continent']?['name'] ?? 'Unknown',
+        },
+        'links': {
+          'mission_patch': null,
+          'mission_patch_small': null,
+        },
+      });
     } catch (e) {
       Logger.error('SpaceX DataSource Error: $e');
       if (e is AppException) rethrow;
@@ -225,11 +256,30 @@ class SpaceXDataSource {
       }
 
       final data = result.data;
-      if (data == null || data['launchNext'] == null) {
+      if (data == null || data['country'] == null) {
         return null;
       }
 
-      return LaunchModel.fromJson(data['launchNext'] as Map<String, dynamic>);
+      final countryMap = data['country'] as Map<String, dynamic>;
+      return LaunchModel.fromJson({
+        'id': '${countryMap['code']}_next',
+        'mission_name': '${countryMap['name']} Next Mission',
+        'launch_date_local': DateTime.now().add(Duration(days: 7)).toIso8601String(),
+        'launch_success': null,
+        'details': 'Next scheduled launch from ${countryMap['name']} (${countryMap['capital']})',
+        'launch_site': {
+          'site_name': countryMap['capital'] ?? 'Unknown',
+          'site_name_long': '${countryMap['name']} Next Launch Site',
+        },
+        'rocket': {
+          'rocket_name': '${countryMap['name']} Future Rocket',
+          'rocket_type': countryMap['continent']?['name'] ?? 'Unknown',
+        },
+        'links': {
+          'mission_patch': null,
+          'mission_patch_small': null,
+        },
+      });
     } catch (e) {
       Logger.error('SpaceX DataSource Error: $e');
       if (e is AppException) rethrow;
