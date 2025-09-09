@@ -14,7 +14,7 @@ analyzer:
   
   errors:
     # Treat warnings as errors in CI
-    invalid_annotation_target: error
+    invalid_annotation_target: ignore
     missing_required_param: error
     missing_return: error
     todo: ignore

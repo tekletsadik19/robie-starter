@@ -18,7 +18,8 @@ class AppUpdateRepositoryImpl implements AppUpdateRepository {
       return Right(policy);
     } catch (e) {
       return Left(
-          ServerFailure(message: 'Failed to evaluate update policy: $e'),);
+        ServerFailure(message: 'Failed to evaluate update policy: $e'),
+      );
     }
   }
 
@@ -29,7 +30,8 @@ class AppUpdateRepositoryImpl implements AppUpdateRepository {
       return Right(policy.currentVersion);
     } catch (e) {
       return Left(
-          ServerFailure(message: 'Failed to get current app version: $e'),);
+        ServerFailure(message: 'Failed to get current app version: $e'),
+      );
     }
   }
 
@@ -42,7 +44,8 @@ class AppUpdateRepositoryImpl implements AppUpdateRepository {
         return const Right(null);
       } else {
         return Left(
-            ServerFailure(message: 'Cannot launch update URL: $downloadUrl'),);
+          ServerFailure(message: 'Cannot launch update URL: $downloadUrl'),
+        );
       }
     } catch (e) {
       return Left(ServerFailure(message: 'Failed to initiate update: $e'));

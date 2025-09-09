@@ -5,7 +5,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:robbie_starter/core/di/injection_container.dart';
 import 'package:robbie_starter/core/theme/app_theme.dart';
 import 'package:robbie_starter/core/theme/theme_cubit.dart';
-import 'package:robbie_starter/features/counter/presentation/pages/counter_page.dart';
+import 'package:robbie_starter/app/view/main_navigation.dart';
 import 'package:robbie_starter/l10n/l10n.dart';
 
 class App extends StatelessWidget {
@@ -24,7 +24,7 @@ class App extends StatelessWidget {
             themeMode: themeState.themeMode,
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,
-            home: const CounterPage(),
+            home: const MainNavigation(),
             debugShowCheckedModeBanner: false,
             // Responsive and accessibility settings
             builder: (context, child) {

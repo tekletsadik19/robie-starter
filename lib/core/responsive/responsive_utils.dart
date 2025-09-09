@@ -100,6 +100,26 @@ class ResponsiveUtils {
     );
   }
 
+  /// Get responsive padding value
+  static double padding(BuildContext context) {
+    return responsiveValue(
+      context: context,
+      mobile: spacing16,
+      tablet: spacing20,
+      desktop: spacing24,
+    );
+  }
+
+  /// Get responsive spacing value
+  static double spacing(BuildContext context) {
+    return responsiveValue(
+      context: context,
+      mobile: spacing12,
+      tablet: spacing16,
+      desktop: spacing20,
+    );
+  }
+
   /// Get responsive margin
   static EdgeInsets responsiveMargin(BuildContext context) {
     return EdgeInsets.symmetric(

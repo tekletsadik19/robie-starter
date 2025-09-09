@@ -85,13 +85,21 @@ class _SecurityCheckPageState extends State<SecurityCheckPage>
           child: BlocConsumer<SecurityBloc, SecurityState>(
             listener: (context, state) {
               state.whenOrNull(
-                loaded: (securityAssessment, updatePolicy, warningDismissed, _,
-                    __,) {
+                loaded: (
+                  securityAssessment,
+                  updatePolicy,
+                  warningDismissed,
+                  _,
+                  __,
+                ) {
                   if (!securityAssessment.overallThreatLevel.isSecure ||
                       updatePolicy.mustUpdate) {
                     if (!warningDismissed) {
                       _showSecurityDialog(
-                          context, securityAssessment, updatePolicy,);
+                        context,
+                        securityAssessment,
+                        updatePolicy,
+                      );
                     }
                   } else {
                     // Security check passed, continue to app
@@ -130,8 +138,8 @@ class _SecurityCheckPageState extends State<SecurityCheckPage>
                               width: 120,
                               height: 120,
                               decoration: BoxDecoration(
-                                color:
-                                    theme.colorScheme.primary.withValues(alpha: 0.1),
+                                color: theme.colorScheme.primary
+                                    .withValues(alpha: 0.1),
                                 borderRadius: BorderRadius.circular(60),
                                 border: Border.all(
                                   color: theme.colorScheme.primary

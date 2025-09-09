@@ -39,7 +39,8 @@ class SecurityWarningDialog extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              _getWarningColor(securityStatus.threatLevel).withValues(alpha: 0.1),
+              _getWarningColor(securityStatus.threatLevel)
+                  .withValues(alpha: 0.1),
               Colors.white,
             ],
           ),
@@ -66,8 +67,8 @@ class SecurityWarningDialog extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
-            color:
-                _getWarningColor(securityStatus.threatLevel).withValues(alpha: 0.1),
+            color: _getWarningColor(securityStatus.threatLevel)
+                .withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(12),
           ),
           child: SvgPicture.asset(
@@ -105,17 +106,18 @@ class SecurityWarningDialog extends StatelessWidget {
     );
   }
 
-
   Widget _buildSecurityWarning(BuildContext context) {
     final theme = Theme.of(context);
 
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: _getWarningColor(securityStatus.threatLevel).withValues(alpha: 0.1),
+        color:
+            _getWarningColor(securityStatus.threatLevel).withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
-          color: _getWarningColor(securityStatus.threatLevel).withValues(alpha: 0.3),
+          color: _getWarningColor(securityStatus.threatLevel)
+              .withValues(alpha: 0.3),
         ),
       ),
       child: Column(
@@ -176,7 +178,8 @@ class SecurityWarningDialog extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: theme.colorScheme.surfaceContainerHighest.withValues(alpha: 0.5),
+              color: theme.colorScheme.surfaceContainerHighest
+                  .withValues(alpha: 0.5),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Row(
@@ -267,7 +270,9 @@ class SecurityWarningDialog extends StatelessWidget {
 
   String _getSecurityIcon() {
     final threats = securityStatus.assessment.detectedThreats;
-    if (threats.any((t) => t.type == ThreatType.jailbreak || t.type == ThreatType.root)) {
+    if (threats.any(
+      (t) => t.type == ThreatType.jailbreak || t.type == ThreatType.root,
+    )) {
       return 'assets/svg/root_jailbreak.svg';
     } else if (threats.any((t) => t.type == ThreatType.emulator)) {
       return 'assets/svg/emulator_warning.svg';
@@ -279,7 +284,9 @@ class SecurityWarningDialog extends StatelessWidget {
 
   String _getSecurityRecommendation() {
     final threats = securityStatus.assessment.detectedThreats;
-    if (threats.any((t) => t.type == ThreatType.jailbreak || t.type == ThreatType.root)) {
+    if (threats.any(
+      (t) => t.type == ThreatType.jailbreak || t.type == ThreatType.root,
+    )) {
       return 'For your security, please use this app on a non-jailbroken/rooted device.';
     } else if (threats.any((t) => t.type == ThreatType.emulator)) {
       return 'Please use this app on a physical device for the best security.';
@@ -288,5 +295,4 @@ class SecurityWarningDialog extends StatelessWidget {
     }
     return securityStatus.primaryRecommendation;
   }
-
 }

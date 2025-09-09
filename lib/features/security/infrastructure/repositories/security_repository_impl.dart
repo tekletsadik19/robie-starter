@@ -37,7 +37,8 @@ class SecurityRepositoryImpl implements SecurityRepository {
       return Right(fingerprint);
     } catch (e) {
       return Left(
-          ServerFailure(message: 'Failed to generate device fingerprint: $e'),);
+        ServerFailure(message: 'Failed to generate device fingerprint: $e'),
+      );
     }
   }
 
@@ -57,7 +58,8 @@ class SecurityRepositoryImpl implements SecurityRepository {
       return const Right(null);
     } catch (e) {
       return Left(
-          ServerFailure(message: 'Failed to report security violation: $e'),);
+        ServerFailure(message: 'Failed to report security violation: $e'),
+      );
     }
   }
 }

@@ -65,5 +65,4 @@ class AppVersionService implements IAppVersionRepository {
       return null;
     }
   }
-
 }

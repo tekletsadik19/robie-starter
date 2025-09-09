@@ -68,5 +68,4 @@ class AppUpdateDataSourceImpl implements AppUpdateDataSource {
 
     throw UnimplementedError('Download functionality not implemented yet');
   }
-
 }
