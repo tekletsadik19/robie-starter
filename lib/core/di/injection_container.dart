@@ -19,7 +19,7 @@ Future<void> configureDependencies() async {
   await Hive.initFlutter();
 
   // Initialize dependency injection
-  sl.init();
+  await getIt.init();
 
   // Initialize encryption manager after DI setup
   final encryptionManager = sl<HiveEncryptionManager>();

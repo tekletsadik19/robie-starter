@@ -17,15 +17,19 @@ class _SecureAppState extends State<SecureApp> {
   @override
   Widget build(BuildContext context) {
     if (!_securityCheckPassed) {
-      return BlocProvider(
-        create: (context) => getIt<SecurityBloc>(),
-        child: SecurityCheckPage(
-          onSecurityCheckComplete: () {
-            setState(() {
-              _securityCheckPassed = true;
-            });
-          },
+      return MaterialApp(
+        title: 'Security Check',
+        home: BlocProvider(
+          create: (context) => getIt<SecurityBloc>(),
+          child: SecurityCheckPage(
+            onSecurityCheckComplete: () {
+              setState(() {
+                _securityCheckPassed = true;
+              });
+            },
+          ),
         ),
+        debugShowCheckedModeBanner: false,
       );
     }
 
