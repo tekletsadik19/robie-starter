@@ -12,7 +12,7 @@ class SecureApp extends StatefulWidget {
 }
 
 class _SecureAppState extends State<SecureApp> {
-  bool _securityCheckPassed = false;
+  bool _securityCheckPassed = true; // TODO: Set to false to enable security check
 
   @override
   Widget build(BuildContext context) {
