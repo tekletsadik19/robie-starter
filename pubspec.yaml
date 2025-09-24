@@ -7,22 +7,22 @@ environment:
   sdk: ^3.5.0
 
 dependencies:
-  bloc: ^8.1.4
+  bloc: ^9.0.0
   crypto: ^3.0.3
   dartz: ^0.10.1
-  device_info_plus: ^9.1.0
+  device_info_plus: ^12.1.0
   dio: ^5.9.0
   equatable: ^2.0.7
   flutter:
     sdk: flutter
-  flutter_bloc: ^8.1.6
-  flutter_hooks: ^0.20.5
+  flutter_bloc: ^9.1.1
+  flutter_hooks: ^0.21.3+1
   flutter_localizations:
     sdk: flutter
   flutter_svg: ^2.0.9
-  freezed: ^2.5.7
+  freezed: ^3.2.3
   google_fonts: ^6.1.0
-  freezed_annotation: ^2.4.4
+  freezed_annotation: ^3.1.0
   get_it: ^8.2.0
   graphql_flutter: ^5.2.0
   hive: ^2.2.3
@@ -32,22 +32,21 @@ dependencies:
   jailbreak_root_detection: ^1.0.0
   json_annotation: ^4.9.0
   json_serializable: ^6.9.0
-  package_info_plus: ^8.3.1
+  package_info_plus: ^9.0.0
   responsive_framework: ^1.5.1
   retrofit: ^4.5.0
   shared_preferences: ^2.2.2
   url_launcher: ^6.2.2
 
 dev_dependencies:
-  bloc_test: ^9.1.7
-  build_runner: ^2.4.13
-  flutter_test:
-    sdk: flutter
-  hive_generator: ^2.0.1
+  bloc_test: ^10.0.0
   injectable_generator: ^2.6.2
   mocktail: ^1.0.4
-  retrofit_generator: ^9.1.5
-  very_good_analysis: ^6.0.0
+  retrofit_generator: ^10.0.5
+  very_good_analysis: ^10.0.0
+  flutter_test:
+    sdk: flutter
+  
 
 flutter:
   uses-material-design: true

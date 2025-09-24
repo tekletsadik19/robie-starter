@@ -173,7 +173,7 @@ class SpaceXDataSource {
         return LaunchModel.fromJson({
           'id': '${countryMap['code']}_upcoming',
           'mission_name': '${countryMap['name']} Future Mission',
-          'launch_date_local': DateTime.now().add(Duration(days: 30)).toIso8601String(),
+          'launch_date_local': DateTime.now().add(const Duration(days: 30)).toIso8601String(),
           'launch_success': null,
           'details': 'Upcoming launch mission for ${countryMap['name']}',
           'launch_site': {
@@ -219,7 +219,7 @@ class SpaceXDataSource {
       return LaunchModel.fromJson({
         'id': '${countryMap['code']}_latest',
         'mission_name': '${countryMap['name']} Latest Mission',
-        'launch_date_local': DateTime.now().subtract(Duration(days: 1)).toIso8601String(),
+        'launch_date_local': DateTime.now().subtract(const Duration(days: 1)).toIso8601String(),
         'launch_success': true,
         'details': 'Latest successful launch from ${countryMap['name']} (${countryMap['capital']})',
         'launch_site': {
@@ -264,7 +264,7 @@ class SpaceXDataSource {
       return LaunchModel.fromJson({
         'id': '${countryMap['code']}_next',
         'mission_name': '${countryMap['name']} Next Mission',
-        'launch_date_local': DateTime.now().add(Duration(days: 7)).toIso8601String(),
+        'launch_date_local': DateTime.now().add(const Duration(days: 7)).toIso8601String(),
         'launch_success': null,
         'details': 'Next scheduled launch from ${countryMap['name']} (${countryMap['capital']})',
         'launch_site': {
