@@ -561,10 +561,10 @@ packages:
     dependency: "direct main"
     description:
       name: jailbreak_root_detection
-      sha256: c611229940a09785bd686364e92a40b07724926d2496c931527805101eb3da86
+      sha256: bcf00cc83350a0be5a75318bdf4913a7a9df0a23faecb8b8839418ad708b95fe
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.6"
+    version: "1.2.0"
   js:
     dependency: transitive
     description:
