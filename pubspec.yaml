@@ -7,7 +7,7 @@ environment:
   sdk: ^3.5.0
 
 dependencies:
-  bloc: ^9.0.0
+  bloc: ^9.0.1
   crypto: ^3.0.3
   dartz: ^0.10.1
   device_info_plus: ^12.1.0
